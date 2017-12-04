@@ -8,13 +8,19 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+    // (1)
+    // EditText x;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // local final variable is a bad idea, use global field instead - (1) and replace line below with "x = findViewById(R.id.et1)";
+        // final means "contant - unable to change"
         final EditText x = findViewById(R.id.et1);
 
+        // one letters variable is a bad idea
         final EditText y = findViewById(R.id.et2);
 
         Button z = findViewById(R.id.but1);
